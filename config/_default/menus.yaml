@@ -6,19 +6,16 @@
 main:
   - name: Home
     url: /
-    weight: 10
-  - name: Qualifications
-    url: qualifications/
-    weight: 11
+    weight: 1
   - name: Research
     url: research/
-    weight: 12
+    weight: 11
   - name: Projects
     url: projects/
+    weight: 12
+  - name: Education & Experience
+    url: qualifications/
     weight: 13
-  # - name: Awards and honors
-  #   url: awards/
-  #   weight: 30
   - name: CV
     url: uploads/Academic_CV_Chowdhury_Ahmed_Hossain.pdf
     weight: 999

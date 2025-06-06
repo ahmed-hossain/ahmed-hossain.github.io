@@ -15,7 +15,7 @@
 {{ $skills := $person_page.Params.skills }}
 {{ $show_show_skill_percentage := $block.design.show_skill_percentage | default true }}
 
-<div class="container prose max-w-screen-lg mx-auto px-6">
+<div class="container prose max-w-screen-md mx-auto">
 
   <div class="title text-center font-light text-primary-700 dark:text-white">
     {{ $block.content.title | markdownify | emojify }}
@@ -23,8 +23,8 @@
 
   {{ with $block.content.text }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
 
-  <div class="md:grid md:grid-cols-3 gap-12 justify-center">
-  {{ with $block.skills }}
+  <div class="md:grid md:grid-cols-2 gap-12 justify-center">
+  {{ with $skills }}
   {{ range .}}
     {{ if gt (len .tools) 4 }} 
     <div class="md:col-span-2 relative flex flex-col">

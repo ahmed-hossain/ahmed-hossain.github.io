@@ -23,10 +23,10 @@
     {{/*  <ol class="relative border-s border-gray-200 dark:border-gray-700">  */}}
     <ol class="relative">
       {{ range $idx, $key := $person.education }}
-      <li class="center-mbl flex gap-12">
+      <li class="center-mbl pb-6 flex gap-12">
           {{ if .logo }}
           {{ $logo := ($person_page.Resources.ByType "image").GetMatch (.logo) }} 
-          {{ $logo_image := $logo.Fill "150x150 Center" }}
+          {{ $logo_image := $logo.Fill "120x120 Center" }}
           <a href="{{.uni_url}}" target="_blank"><img class="uni-logo bg-white dark:bg-gray-800 p-1" src="{{ $logo_image.RelPermalink }}" alt="{{$person_page.Title}}"
           width="{{ $logo_image.Width }}" height="{{ $logo_image.Height }}"></a>
           {{ end }}
