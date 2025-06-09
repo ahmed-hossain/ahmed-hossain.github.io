@@ -41,15 +41,7 @@ jobs:
         path: /tmp/hugo_cache_runner/
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
         restore-keys: |
-          ${{ runner.os }}-hugomod-        
-    - name: Build TinaCMS
-      env:
-        NEXT_PUBLIC_TINA_CLIENT_ID: dc4f2f3b-ea7c-4087-b9e3-12003454d61d
-        TINA_TOKEN: a3b0ca18e7c5329dd7d73b1b7c4a31787f4a461c
-      run: |
-        npm install -g pnpm
-        pnpm i
-        npx tinacms build
+          ${{ runner.os }}-hugomod-
     - name: Run custom command
       run: |
         hugo
